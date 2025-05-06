@@ -76,7 +76,7 @@
     </fieldset>
     <fieldset name="block_data" sortOrder="20">
         <settings>
-            <label translate="true">Main</label>
+            <label translate="true">Newsletter Title</label>
             <collapsible>true</collapsible>
             <opened>true</opened>
         </settings>
@@ -103,7 +103,7 @@
     </fieldset>
     <fieldset name="newsletter_data" sortOrder="30">
         <settings>
-            <label translate="true">Newsletter Data</label>
+            <label translate="true">Newsletter Form</label>
             <collapsible>true</collapsible>
             <opened>true</opened>
         </settings>
@@ -125,27 +125,11 @@
                 </imageUploader>
             </formElements>
         </field>
-        <field name="email_icon_alt" sortOrder="20" formElement="input">
-            <settings>
-                <label translate="true">Email Icon ALT</label>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="email_icon_title" sortOrder="30" formElement="input">
-            <settings>
-                <label translate="true">Email Icon Title</label>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="input_text" sortOrder="40" formElement="input">
+        <field name="placeholder" sortOrder="40" formElement="input">
             <settings>
                 <label translate="true">Input Text</label>
                 <dataType>text</dataType>
-                <dataScope>input_text</dataScope>
+                <dataScope>placeholder</dataScope>
                 <validation>
                     <rule name="validate-string" xsi:type="boolean">true</rule>
                 </validation>
@@ -156,52 +140,6 @@
                 <label translate="true">Submit Button Text</label>
                 <dataType>text</dataType>
                 <dataScope>submit_button_text</dataScope>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="rules_general_text" sortOrder="60" formElement="input">
-            <settings>
-                <label translate="true">General Rules Text</label>
-                <dataType>text</dataType>
-                <dataScope>rules_general_text</dataScope>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="rules_first_url" sortOrder="70" formElement="input">
-            <settings>
-                <label translate="true">First Rules URL</label>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="rules_first_text" sortOrder="80" formElement="input">
-            <settings>
-                <label translate="true">First Rules Text</label>
-                <dataType>text</dataType>
-                <dataScope>rules_first_text</dataScope>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="rules_second_url" sortOrder="90" formElement="input">
-            <settings>
-                <label translate="true">Second Rules URL</label>
-                <validation>
-                    <rule name="validate-string" xsi:type="boolean">true</rule>
-                </validation>
-            </settings>
-        </field>
-        <field name="rules_second_text" sortOrder="100" formElement="input">
-            <settings>
-                <label translate="true">Second Rules Text</label>
-                <dataType>text</dataType>
-                <dataScope>rules_second_text</dataScope>
                 <validation>
                     <rule name="validate-string" xsi:type="boolean">true</rule>
                 </validation>

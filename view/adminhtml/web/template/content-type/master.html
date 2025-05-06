@@ -8,45 +8,22 @@
  */
 -->
 
-<widget type="PFNewsletter"
-        data-bind="attr: {
+
+<widget type="NewsletterBlock" data-bind="attr: {
         'data-block-title': data.block_title.html,
         'data-block-subtitle': data.block_subtitle.html,
         'data-email-icon-src': data.email_icon.attributes().src,
-        'data-email-icon-alt': data.email_icon.attributes().alt,
-        'data-email-icon-title': data.email_icon.attributes().title,
-        'data-input-placeholder': data.input_text.html,
-        'data-submit-button-text': data.submit_button_text.html,
-        'data-rules-general-text': data.rules_general_text.html,
-        'data-rules-first-url': data.rules_first_url.attributes().value,
-        'data-rules-first-text': data.rules_first_text.html,
-        'data-rules-second-url': data.rules_second_url.attributes().value,
-        'data-rules-second-text': data.rules_second_text.html
-    }"
->
+        'data-email-icon-alt': data.email_icon.attributes().src,
+        'data-email-icon-title': data.email_icon.attributes().src,
+        'data-input-text': data.placeholder.html,
+        'data-submit-button-text': data.submit_button_text.html
+    }">
     <div attr="data.main.attributes">
-        <div html="data.block_title.html"></div>
-        <div html="data.block_subtitle.html"></div>
+        <div attr="data.block_title.attributes" html="data.block_title.html"></div>
+        <div attr="data.block_subtitle.attributes" html="data.block_subtitle.html"></div>
         <div attr="data.email_icon.attributes"></div>
-        <form method="post" action="/newsletter/subscriber/new" data-mage-init='{"validation":{}}'>
-            <input type="email"
-                   name="email"
-                   class="newsletter-input"
-                   required="required"
-                   data-validate="{required:true, 'validate-email':true}"
-                   attr="data.input_text.attributes"
-                   placeholder="data.input_text.html"
-            />
-            <button type="submit"
-                    class="newsletter-submit-button"
-                    attr="data.submit_button_text.attributes"
-                    text="data.submit_button_text.html">
-            </button>
+        <form class="form-subscribe" data-bind="attr: { action: getActionNewsletter() }" method="post">
+            <input name="email" type="email" attr="data.placeholder.attributes" required />
+            <button type="submit" data-bind="attr: data.submit_button_text.attributes, text: data.submit_button_text.html"></button>
         </form>
-
-        <div html="data.rules_general_text.html"></div>
-        <a attr="data.rules_first_url.attributes" html="data.rules_first_text.html"></a>
-        <a attr="data.rules_second_url.attributes" html="data.rules_second_text.html"></a>
-    </div>
 </widget>
-

@@ -1,0 +1,6 @@
+<form action="<?= $block->getUrl('emailsignup/index/post') ?>" method="post" class="emailsignup-form">
+    <?= $block->getBlockHtml('formkey') ?>
+    <label for="email"><?= __('Email Address') ?></label>
+    <input type="email" name="email" value="<?= $block->escapeHtml($block->getEmail()) ?>" required />
+    <button type="submit"><?= __('Sign Up') ?></button>
+</form>

@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Mail/etc/email_templates.xsd">
+	<template id="pf_newsletter_email" label="PF Newsletter Email" file="pf_newsletter_email.html" type="html" module="PF_EmailSignup" area="frontend" />
+</config>

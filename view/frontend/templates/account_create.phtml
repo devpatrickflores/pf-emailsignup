@@ -1,0 +1,42 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+$email = $block->getRequest()->getParam('email');
+$token = $block->getRequest()->getParam('token');
+?>
+
+<form action="<?= $block->getUrl('emailsignup/account/submit') ?>" method="post">
+    <?= $block->getBlockHtml('formkey') ?>
+    <input type="hidden" name="email" value="<?= $block->escapeHtml($email) ?>" />
+    <input type="hidden" name="token" value="<?= $block->escapeHtml($token) ?>" />
+
+    <div class="field">
+        <label><?= __('First Name') ?></label>
+        <input type="text" name="firstname" required />
+    </div>
+
+    <div class="field">
+        <label><?= __('Last Name') ?></label>
+        <input type="text" name="lastname" required />
+    </div>
+
+    <div class="field">
+        <label><?= __('Date of Birth') ?></label>
+        <input type="date" name="dob" required />
+    </div>
+
+    <div class="field">
+        <label><?= __('Password') ?></label>
+        <input type="password" name="password" required />
+    </div>
+
+    <div class="field">
+        <label><?= __('Confirm Password') ?></label>
+        <input type="password" name="password_confirmation" required />
+    </div>
+
+    <div class="actions">
+        <button type="submit" class="action primary">
+            <span><?= __('Create Account') ?></span>
+        </button>
+    </div>
+</form>

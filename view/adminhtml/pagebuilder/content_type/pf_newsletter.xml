@@ -16,7 +16,7 @@
           menu_section="pf_core_section" 
           component="Magento_PageBuilder/js/content-type"
           preview_component="PF_EmailSignup/js/content-type/preview"
-          master_component="Magento_PageBuilder/js/content-type/master"
+          master_component="PF_EmailSignup/js/content-type/master"
           form="pf_pagebuilder_newsletter_form"
           icon="icon-pagebuilder-banner"
           sortOrder="21"
@@ -59,26 +59,11 @@
                         <attribute name="email_icon_alt" source="alt"/>
                         <attribute name="email_icon_title" source="title"/>
                     </element>
-                    <element name="input_text">
-                        <html name="input_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper" />
-                    </element>
+                    <element name="placeholder">
+                        <attribute name="placeholder" source="placeholder"/>
+                   </element>
                     <element name="submit_button_text">
                         <html name="submit_button_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper" />
-                    </element>
-                    <element name="rules_general_text">
-                        <html name="rules_general_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper" />
-                    </element>
-                    <element name="rules_first_url">
-                        <attribute name="rules_first_url" source="value"/>
-                    </element>
-                    <element name="rules_first_text">
-                        <html name="rules_first_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper" />
-                    </element>
-                    <element name="rules_second_url">
-                        <attribute name="rules_second_url" source="value"/>
-                    </element>
-                    <element name="rules_second_text">
-                        <html name="rules_second_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper" />
                     </element>
                 </elements>
             </appearance>
